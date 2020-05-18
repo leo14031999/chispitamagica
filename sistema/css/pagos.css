@@ -1,3 +1,7 @@
+
+.tabla_de_contenido{
+  display: flex;
+}
 .navegador_sistema2{
   background: #333;
   width: 150px;
