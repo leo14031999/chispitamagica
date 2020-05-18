@@ -1,0 +1,119 @@
+
+section article {
+background-image: url(../img/chispa.jpg);
+background-position:right;
+background-repeat: no-repeat;
+background-color: black;
+display: flex;
+height: -webkit-fill-available;
+
+}
+
+  h1,h2,h3,h4,h6{
+  color: white;
+
+}
+ .texto{
+  margin: 326px 0px 8px -406px;
+}
+
+.overlay
+{
+ background: rgba(0, 0, 0, 0.4);
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ up: 5;
+ display: flex;
+ align-items: center;
+ justify-content:  center;
+ visibility: hidden;
+
+}
+.overlay.active
+{
+ visibility: visible;
+}
+
+.popup
+{
+ background: #f8f8f8;
+ box-shadow: 0px 0px 5px 0px rgba(255, 0, 0, 0.3);
+ border-radius: 3px;
+ padding: 30px;
+ text-align:  center;
+ width: 600px;
+
+}
+.popup .btn-cerrar-popup
+{
+font-size: 16px;
+line-height: 16px;
+display: block;
+text-align: right;
+color: #BBBBBB;
+transition: .3s ease all:
+}
+.popup .btn-cerrar-popup:hover
+{
+ color: #000;
+}
+.popup h3
+{
+ font-size: 36px;
+ font-weight: 600;
+ margin-bottom: 10px;
+ /*opacity: */
+}
+.popup h3
+{
+ font-size: 36px;
+ font-weight: 600;
+ margin-bottom: 10px;
+ /*opacity: */
+}
+
+.popup h4
+{
+ font-size: 36px;
+ font-weight: 300;
+ margin-bottom: 40px;
+ /*opacity: */
+}
+.popup form .Contenedor_inputs
+{}
+   .popup form .Contenedor_inputs input{
+     width: 100%;
+     margin-bottom: 20px;
+     height: 52px;
+     line-height: 52px;
+     font-size: 18px;
+     text-align: center;
+     border: 1px solid #bbbbbb;
+   }
+ .popup  form .btn-submit
+{
+ padding: 0;
+ height: 40px;
+ line-height: 40PX;
+ border: none;
+ color: #fff;
+ background: #5E7DE3;
+ border-radius: 3px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: .3s ease all;
+
+
+
+}
+ .popup  form .btn-submit:hover
+ {
+   background: rgba(94,125,227, ,9);
+   text-align: center;
+ }
+ .overlay h2{
+   color: black;
+ }
