@@ -54,21 +54,23 @@
 .overlay
 {
  background: rgba(0, 0, 0, 0.4);
- position: fixed;
+ position: absolute;
 
  bottom: 0;
  left: 0;
- right: 0;
- up: 5;
+ right: -100px;
+ up: 52px;
  display: flex;
  align-items: center;
  justify-content:  center;
  visibility: hidden;
-top: -100px;
+top: -330px;
+margin:
 }
 .overlay.active
 {
  visibility: visible;
+
 }
 
 .popup
@@ -153,7 +155,7 @@ transition: .3s ease all:
  }
 .tabla_de_producto{
     position: absolute;
-    top:600px;
+    top:400px;
     right:120px;
     left: 180px;
 }
