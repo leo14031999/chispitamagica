@@ -1,106 +1,229 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Inventario</title>
-    <!-- IDEA: aqui esta enlase a estlos en css -->
-    <link rel="stylesheet" href="css/inventario.css">
-    <!-- IDEA: aquie esta meta para que sea reponsive con boostrap -->
-    <meta name="viewport" content="width=device-width, user-sccalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- IDEA: llamando estilo boostrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+<?php
+function ValidateEmail($email)
+{
+   $pattern = '/^([0-9a-z]([-.\w]*[0-9a-z])*@(([0-9a-z])+([-\w]*[0-9a-z])*\.)+[a-z]{2,6})$/i';
+   return preg_match($pattern, $email);
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['formid']) && $_POST['formid'] == 'form1')
+{
+   $mailto = 'santosfrancoleonardo@gmail.com';
+   $mailfrom = isset($_POST['email']) ? $_POST['email'] : $mailto;
+   $subject = 'inventario';
+   $message = 'Values submitted from web site form:';
+   $success_url = '';
+   $error_url = '';
+   $eol = "\n";
+   $error = '';
+   $internalfields = array ("submit", "reset", "send", "filesize", "formid", "captcha_code", "recaptcha_challenge_field", "recaptcha_response_field", "g-recaptcha-response");
+   $boundary = md5(uniqid(time()));
+   $header  = 'From: '.$mailfrom.$eol;
+   $header .= 'Reply-To: '.$mailfrom.$eol;
+   $header .= 'MIME-Version: 1.0'.$eol;
+   $header .= 'Content-Type: multipart/mixed; boundary="'.$boundary.'"'.$eol;
+   $header .= 'X-Mailer: PHP v'.phpversion().$eol;
 
-  </head>
-  <body>
-    <!-- IDEA: menu de navecacin -->
-    <header >
-      <div class="buscador_sistema1">
-        <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">chispitas magicas</a>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+   try
+   {
+      if (!ValidateEmail($mailfrom))
+      {
+         $error .= "The specified email address (" . $mailfrom . ") is invalid!\n<br>";
+         throw new Exception($error);
+      }
 
-          </form>
-        </nav>
-      </div>
-
-
-      </header>
-      <!-- IDEA: segundo <menu>
-
-      </menu> -->
-      <div class="tabla_de_contenido">
-
-
-<div class="navegador_sistema2">
-
-  <div class="dropdown">
-    <button class="dropbtn"><a href="clientes.html">Clientes</a></button>
-    <div class="dropdown-content">
-      <a href="clientes.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="cotisador.html">Cotizador</a></button>
-    <div class="dropdown-content">
-      <a href="cotisador.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="personal.html">Personal</a></button>
-    <div class="dropdown-content">
-      <a href="personal.html">Agregar personal</a>
-      <a href="#">Lista de personal</a>
-      <a href="#">Horarios</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="productos.html">Productos</a></button>
-    <div class="dropdown-content">
-      <a href="productos.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="pagos.html">Pagos</a></button>
-    <div class="dropdown-content">
-      <a href="pagos.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="reportes.html">Reportes</a></button>
-    <div class="dropdown-content">
-      <a href="reportes.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  <div class="dropdown">
-    <button class="dropbtn"><a href="inventario.html">Inventario</a></button>
-    <div class="dropdown-content">
-      <a href="inventario.html">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
-  </div>
-  <!-- IDEA: progame aqui -->
-<section>
-  <h1>hello wordl</h1>
-</section>
-  </div>
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/"></script>
-<script src=" ../js/boostrap.min.js" charset="utf-8"></script>
-
-  </body>
-
+      $message .= $eol;
+      $message .= "IP Address : ";
+      $message .= $_SERVER['REMOTE_ADDR'];
+      $message .= $eol;
+      foreach ($_POST as $key => $value)
+      {
+         if (!in_array(strtolower($key), $internalfields))
+         {
+            if (!is_array($value))
+            {
+               $message .= ucwords(str_replace("_", " ", $key)) . " : " . $value . $eol;
+            }
+            else
+            {
+               $message .= ucwords(str_replace("_", " ", $key)) . " : " . implode(",", $value) . $eol;
+            }
+         }
+      }
+      $body  = 'This is a multi-part message in MIME format.'.$eol.$eol;
+      $body .= '--'.$boundary.$eol;
+      $body .= 'Content-Type: text/plain; charset=ISO-8859-1'.$eol;
+      $body .= 'Content-Transfer-Encoding: 8bit'.$eol;
+      $body .= $eol.stripslashes($message).$eol;
+      if (!empty($_FILES))
+      {
+         foreach ($_FILES as $key => $value)
+         {
+             if ($_FILES[$key]['error'] == 0)
+             {
+                $body .= '--'.$boundary.$eol;
+                $body .= 'Content-Type: '.$_FILES[$key]['type'].'; name='.$_FILES[$key]['name'].$eol;
+                $body .= 'Content-Transfer-Encoding: base64'.$eol;
+                $body .= 'Content-Disposition: attachment; filename='.$_FILES[$key]['name'].$eol;
+                $body .= $eol.chunk_split(base64_encode(file_get_contents($_FILES[$key]['tmp_name']))).$eol;
+             }
+         }
+      }
+      $body .= '--'.$boundary.'--'.$eol;
+      if ($mailto != '')
+      {
+         mail($mailto, $subject, $body, $header);
+      }
+      header('Location: '.$success_url);
+   }
+   catch (Exception $e)
+   {
+      $errorcode = file_get_contents($error_url);
+      $replace = "##error##";
+      $errorcode = str_replace($replace, $e->getMessage(), $errorcode);
+      echo $errorcode;
+   }
+   exit;
+}
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Página sin título</title>
+<meta name="generator" content="WYSIWYG Web Builder 15 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/base/jquery-ui.min.css" rel="stylesheet">
+<link href="css/formulario_inventario.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="wwb15.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#FileUpload1 :file").on('change', function()
+   {
+      var input = $(this).parents('.input-group').find(':text');
+      input.val($(this).val());
+   });
+   var ModalverOpts =
+   {
+      modal: true,
+      width: 365,
+      height: 610,
+      position: { my: 'center', at: 'center', of: window },
+      resizable: false,
+      draggable: false,
+      closeOnEscape: true,
+      show: 'fade',
+      hide: 'fade',
+      autoOpen: true,
+      classes: {'ui-dialog': 'Modalver'}
+   };
+   $("#Modalver").dialog(ModalverOpts);
+   $(".Modalver .ui-dialog-titlebar").hide();
+   $(".Modalver").removeClass('ui-corner-all');
+   $(".Modalver").removeClass('ui-widget-content');
+   $("#Modalver").css({'padding':'0','height':'610px'});
+   $("#Modalver-close").click( function()
+   {
+      $("#Modalver").dialog('close');
+   });
+});
+</script>
+</head>
+<body onload="$('#Modalver').dialog('close');return false;">
+<div id="wb_Form1">
+<form name="Material" method="post" action="<?php echo basename(__FILE__); ?>" enctype="multipart/form-data" id="Form1">
+<input type="hidden" name="formid" value="form1">
+<label for="codigo" id="Label1">Fecha:</label>
+<input type="text" id="codigo" name="codigo" value="" spellcheck="false">
+<label for="Editbox2" id="Label2">Marca:</label>
+<label for="Editbox3" id="Label3">Precio:</label>
+<input type="text" id="Editbox3" name="city" value="" spellcheck="false">
+<label for="Editbox4" id="Label4">Accesorios:</label>
+<input type="text" id="Editbox4" name="state" value="" spellcheck="false">
+<label for="Combobox4" id="ubicacion">Ubicacion:</label>
+<input type="text" id="Editbox5" name="code" value="" spellcheck="false">
+<label for="Combobox3" id="cantidad">Cantidad:</label>
+<input type="text" id="Editbox6" name="phone" value="" spellcheck="false">
+<label for="Combobox1" id="categoria">Categoria:</label>
+<label for="Label22" id="estado">Estado:</label>
+<input type="submit" id="crear" name="crear" value="Crear">
+<select name="Estado" size="1" id="Combobox2">
+<option value="">En uso</option>
+<option>Activo</option>
+<option>Alquilado</option>
+<option>Vendido</option>
+<option>Perdido</option>
+</select>
+<select name="Combobox1" size="1" id="Combobox1">
+</select>
+<select name="cantidad" size="1" id="Combobox3">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+<select name="Combobox2" size="1" id="Combobox4">
+<option value="">Casillero 1</option>
+<option>Casillero 2</option>
+<option>Casillero 3</option>
+<option>Casillero 4</option>
+<option>Casillero 5</option>
+<option>Casillero 6</option>
+</select>
+<input type="text" id="Editbox2" name="address" value="" spellcheck="false">
+<label for="codigo" id="Label5">Codigo:</label>
+<label for="codigo" id="Label6">Nombre:</label>
+<input type="reset" id="actualizar" name="actualizar" value="Actualizar">
+<label for="Label22" id="proveedor">Proveedor:</label>
+<input type="text" id="telefono" name="telefono" value="" spellcheck="false">
+<input type="text" id="Editbox1" name="proveedor" value="" spellcheck="false">
+<label for="Label22" id="Label7">Tel/Cel:</label>
+<div id="FileUpload1" class="input-group">
+<input class="form-control" type="text" readonly="">
+<label class="input-group-btn">
+<input type="file" name="FileUpload1" id="FileUpload1-file"><span class="btn">Browse...</span>
+</label>
+</div>
+<label for="Label22" id="Label8">Imagen</label>
+</form>
+</div>
+<div id="Layer1">
+<hr id="Line1">
+<label for="codigo" id="Label9">ID</label>
+<label for="codigo" id="Label10">CODIGO</label>
+<label for="codigo" id="Label11">NOMBRE</label>
+<label for="Combobox4" id="Label13">UBICACIÒN</label>
+<label for="Combobox3" id="Label14">CANTIDAD</label>
+<label for="Combobox1" id="Label15">CATEGORIA</label>
+<label for="Label22" id="Label16">ESTADO</label>
+<label for="Combobox3" id="Label17">ACCIÒN</label>
+<input type="button" id="Button1" name="Editar" value="Editar">
+<input type="button" id="Button2" onclick="$('#Modalver').dialog('open');return false;" name="Ver" value="Ver">
+<input type="button" id="Button3" name="Editar" value="Editar">
+<hr id="Line2">
+<hr id="Line3">
+<div id="Modalver">
+<label for="codigo" id="Label12">Codigo:</label>
+<label for="codigo" id="Label18">Fecha:</label>
+<label for="codigo" id="Label19">Nombre:</label>
+<label for="Editbox2" id="Label20">Marca:</label>
+<label for="Editbox3" id="Label21">Precio:</label>
+<label for="Editbox4" id="Label22">Accesorios:</label>
+<label for="Combobox4" id="Label23">Ubicacion:</label>
+<label for="Combobox3" id="Label24">Cantidad:</label>
+<label for="Combobox1" id="Label25">Categoria:</label>
+<label for="Label22" id="Label26">Estado:</label>
+<label for="Label22" id="Label27">Proveedor:</label>
+<label for="Label22" id="Label28">Tel/Cel:</label>
+<label for="Label22" id="Label29">Imagen</label>
+<a id="Modalver-close"> </a>
+</div>
+</div>
+</body>
 </html>
