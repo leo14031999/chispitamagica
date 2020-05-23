@@ -55,7 +55,7 @@
 {
  background: rgba(0, 0, 0, 0.4);
  position: fixed;
- top: 0;
+
  bottom: 0;
  left: 0;
  right: 0;
@@ -64,7 +64,7 @@
  align-items: center;
  justify-content:  center;
  visibility: hidden;
-
+top: -100px;
 }
 .overlay.active
 {
@@ -151,3 +151,9 @@ transition: .3s ease all:
    background: rgba(94,125,227, ,9);
    text-align: center;
  }
+.tabla_de_producto{
+    position: absolute;
+    top:600px;
+    right:120px;
+    left: 180px;
+}
