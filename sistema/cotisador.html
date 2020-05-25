@@ -150,7 +150,7 @@
 
                  <button  id="boton-abrir-popup" class="boton-abrir-popup"type="button" name="Nuevo cliente">+Nuevo clientes</button>
                  <button  id="boton-abrir-popup-Productos" class="boton-abrir-popup-productos"type="button" name="Nuevo cliente">+Crear producto</button>
-                <button type="button" name="button">buscar producto</button>
+                <button id="boton-abrir-popup-buscador" class="boton-abrir-popup-buscador"type="button" name="button">buscar producto</button>
                 <button type="button" name="button">guardar </button>
                 </div >
 
@@ -163,28 +163,7 @@
         <div class="container">
 
 
-        <div class="row">
-          <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">codigo</th>
-      <th scope="col">cantidad</th>
-      <th scope="col">producto</th>
-      <th scope="col">precio unitario</th>
-      <th scope="col">precio totsl</th>
-    </tr>
-  </thead class="table" >
-  <tbody >
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>saltarin</td>
-      <td>2000</td>
-      <td>20</td>
-    </tr>
-  </tbody>
-        </div>
-            </div>
+
       </form>
     </div>
 
@@ -336,7 +315,45 @@
   </div>
 </div>
 <!-- IDEA: aqui esta la ventana buscador producto -->
+<div class="ventana_buscador"id="ventana_buscador">
+<div class="contenidoBuscador" id="contenidoBuscador">
+<h3>selecione producto</h3>
+<hr>
+<section>
+ <form class="contenidoFormBuscador" action="index.html" method="post">
+   <div class="">
 
+     <input type="search" name="" value="">
+     <label>Buscador</label>
+   </div>
+   <hr>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>codigo</th>
+          <th>nombre</th>
+          <th>cantidad</th>
+          <th>precio</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr>
+  <td>235</td>
+  <td>castillo</td>
+  <td>1</td>
+  <td>5000</td>
+  <td> <span></span> </td>
+ </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div class="">
+        <button id="btn-cerrar-buscador"type="button" name="button">cerrar</button>
+    </div>
+    
+</section>
+</div>
+  </div>
 <script src="js/cotizador.js"></script>
   </body>
 
