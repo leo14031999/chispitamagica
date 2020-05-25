@@ -31,7 +31,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+/* IDEA:  */
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -48,3 +48,13 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #333;}
+
+.navegador_sistema2{
+  margin: 0px 64px 0px 0px ;
+}
+.cont1{
+      margin: 0px 5px 14px 2px;
+      font-variant: all-small-caps;
+    display: grid;
+}
+/* IDEA: estilo Cotizador */
