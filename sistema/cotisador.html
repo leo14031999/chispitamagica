@@ -146,9 +146,9 @@
 
 
               </div>
-              <div class="botones">
+              <div class="container">
 
-                <button type="button" name="button">nuevo cliente</button>
+                 <button  id="boton-abrir-popup" class="boton-abrir-popup"type="button" name="Nuevo cliente">Nuevo clientes</button>
                 <button type="button" name="button">nuevo producto</button>
                 <button type="button" name="button">buscar producto</button>
                 <button type="button" name="button">guardar </button>
@@ -156,10 +156,13 @@
 
           </div>
 
-          <hr>
+
 
         </div>
         <hr>
+        <div class="container">
+
+
         <div class="row">
           <table class="table">
   <thead class="thead-dark">
@@ -181,15 +184,86 @@
     </tr>
   </tbody>
         </div>
+            </div>
       </form>
     </div>
+
+
+
   </section>
+
+<!-- IDEA: ventanas emerjentess -->
+
+</div>
+
+<div class="ventanaNuevoCliente" id="ventanaNuevoCliente">
+  <div class="contenidoVentanaCliente" id="contenidoVentanaCliente">
+    <h4>Agregar nuevo cliente </h4>
+    <hr>
+    <div class="contenedorFormClientes">
+
+
+    <form class="formVentanaCleinte" action="index.html" method="post">
+<div class="cont2">
+<div class="cont3">
+
+
+<label for="">Nombre del clientes</label>
+<input type="text" name="" value="" id="NombreCliente">
+</div>
+<div class="cont3">
+
+
+<label for="">apellido</label>
+<input type="text" name="" value="">
+</div>
+</div>
+
+<div class="cont2">
+<div class="cont3">
+
+
+<label for="">Nombre comercial</label>
+<input type="text" name="" value="">
+</div>
+<div class="cont3">
+
+
+
+<label for="">direccion</label>
+<input type="text" name="" value="">
+</div>
+</div>
+
+<div class="cont2">
+<div class="cont3">
+
+
+<label for="">correo electronico</label>
+<input type="email" name="" value="">
+
+
+</div>
+<div class="cont3">
+
+
+<label for="">telefono</label>
+<input type="email" name="" value="">
+</div>
+</div>
+
+
+      </div>
+      <hr>
+      <div class="contBoton">
+        <button   class="btn-cerrar-popup"id="btn-cerrar-popup"type="button" name="button">cerrar</button>
+          <button type="button" name="button">guardar cambios</button>
+      </div>
+    </form>
   </div>
+</div>
 
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/"></script>
-<script src=" ../js/boostrap.min.js" charset="utf-8"></script>
-
+<script src="js/cotizador.js"></script>
   </body>
 
 </html>
