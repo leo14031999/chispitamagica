@@ -25,3 +25,16 @@ var btnAbrirPopup = document.getElementById('boton-abrir-popup-Productos'),
     btncerrarpopup.addEventListener('click',function(){
 ventanaNuevoProducto.classList.remove("active");
     });
+// IDEA: aqui esta el el centana de buscador
+var btnAbrirPopup = document.getElementById('boton-abrir-popup-buscador'),
+    ventana_buscador= document.getElementById('ventana_buscador'),
+    popup =document.getElementById('contenidoBuscador'),
+    btncerrarpopup = document.getElementById('btn-cerrar-buscador');
+
+
+    btnAbrirPopup.addEventListener('click',function(){
+      ventana_buscador.classList.add("active");
+    });
+    btncerrarpopup.addEventListener('click',function(){
+ventana_buscador.classList.remove("active");
+    });
