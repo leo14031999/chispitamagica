@@ -1,6 +1,7 @@
 
 .tabla_de_contenido{
   display: flex;
+  background: #49505740;
 }
 .navegador_sistema2{
   background: #333;

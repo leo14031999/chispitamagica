@@ -1,5 +1,6 @@
 .tabla_de_contenido{
   display: flex;
+  background: #49505740;
 }
 .navegador_sistema2{
   background: #333;
@@ -189,4 +190,3 @@ transition: opacity 400ms ease-in;
   left: 1300px;
   top: 495px;
 }
-
