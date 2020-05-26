@@ -1,6 +1,7 @@
 
 .tabla_de_contenido{
   display: flex;
+  background: #49505740;
 }
 .navegador_sistema2{
   background: #333;
@@ -83,7 +84,7 @@
 .contenidoVentanaCliente{
   background: -webkit-linear-gradient(#fff, #999);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 30px;
   text-align:  center;
 }
@@ -130,8 +131,8 @@
 .contenidoVentanaProducto{
   background: -webkit-linear-gradient(#fff, #999);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-  padding: 30px;
+  border-radius: 15px;
+  padding: 15px;
   text-align:  center;
 }.contenedorFormProductos{
   box-sizing: border-box;
@@ -176,7 +177,7 @@
 .contenidoBuscador{
   background: -webkit-linear-gradient(#fff, #999);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
+  border-radius: 15px;
   padding: 30px;
   text-align:  center;
   width: 799px;
@@ -187,4 +188,10 @@
     display: grid;
     TEXT-ALIGN: left;
     font-variant: all-small-caps;
+}
+
+table{
+  width: 100%;
+  background: white;
+   text-align: left; 
 }
