@@ -1,5 +1,5 @@
 .tabla_de_contenido{
-  background: white;
+  background: #f7f7f7;
 }
 a
 {
@@ -8,7 +8,7 @@ a
 }
 a:visited
 {
-   color: #800080;
+   color: #007bff;
 }
 a:active
 {
