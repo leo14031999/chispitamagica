@@ -1,6 +1,5 @@
- .tabla_de_contenido{
+.tabla_de_contenido{
   display: flex;
-  background: white;
 }
 .navegador_sistema2{
   background: #333;
@@ -41,6 +40,102 @@
   display: block;
 }
 
+
+#logo1{	
+		width:200px;
+		height:120px;
+		background:white;
+		position:relative;
+		left:30px;
+		top:10px;		
+}
+
+.logoa{width:300px
+height:300px;
+}
+
+
+.acceso_de_pago{
+	border:3px solid;
+	border-radius:10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+	width:1750px;
+	height:800px;
+	display:center;
+}
+
+
+
+.codigo_factura {
+	border:3px solid;
+	background:gray;
+	color:white;
+	float:down;
+}
+
+.cliente {
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.vendedor{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.tiposervicio{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.transaccion{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.forma_pago{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.total{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.fecha{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+.acciones{
+	border:3px solid;
+	background:gray;
+	color:white;
+}
+
+
+.addainforme{border:3px solid;
+	width:300px;
+	height:50px;
+	background:orange;;
+}
+
+
+
+
+
+
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
@@ -49,44 +144,3 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #333;}
-
-.navegador_sistema2{
-  margin: 0px 99px 0px 0px
-}
-.row {
-
-}
-.cont1{
-  display: flex;
-  margin: 0px 0px 15px 0px
-
-}
-.cont2{
-  margin: 0px 80px 0px 0px
-}
-.form_clientes{
-  font-variant: all-small-caps;
-}
-.form_cliente{display: table-caption;
-  width: max-content;
-  padding: 0px 8px 15px 21px;
-    display: table-caption;
-    width: max-content;
-    margin: 64px 3px 27px 2px;
-    background: white;
-
-}
-table{
-  width: 100%;
-}
-
-.contenido_form_cliente{
-  position: relative;
-      left: 169px;
-      right: 12px;
-
-}
-.cabesera_img{
-  position: relative;
-  left: -180px;
-}
