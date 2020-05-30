@@ -81,10 +81,12 @@ table{
 }
 
 .contenido_form_cliente{
-  position: absolute;
-  left: 200px;
-  right: 10px;
-
+  position: relative;
+      left: 169px;
+      right: 12px;
 
 }
-
+.cabesera_img{
+  position: relative;
+  left: -180px;
+}
