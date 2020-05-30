@@ -200,3 +200,11 @@ table{
   background: white;
    text-align: left;
 }
+
+.carrito_body{
+  position: absolute;
+  right: 30px;
+  left: 200px;
+
+
+}
