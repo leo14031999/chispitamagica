@@ -16,7 +16,7 @@
     <header >
       <div class="buscador_sistema1">
         <nav class="navbar navbar-light bg-light">
-          <a class="navbar-brand">chispitas magicas</a>
+          <a class="navbar-brand">cotizacion</a>
           <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -24,8 +24,9 @@
         </nav>
       </div>
     </header>
-      <!-- IDEA: segundo <menu>
 
+      <!-- IDEA: segundo <menu>
+<hr>
       </menu> -->
       <div class="tabla_de_contenido">
 
@@ -49,7 +50,7 @@
     </div>
   </div>
   <div class="dropdown">
-    <button class="dropbtn"><a href="personal.html">Personal</a></button>
+    <button class="dropbtn"><a href="">Personal</a></button>
     <div class="dropdown-content">
       <a href="A.Personal.html">Agregar personal</a>
       <a href="L.personal.html">Lista de personal</a>
@@ -90,13 +91,277 @@
   </div>
   <!-- IDEA: programe aqui su sistema -->
   <section>
-    <h1>hello wordl</h1>
+
+    <div class="carrito_body">
+      <h3> <strong>Cotizacion</strong> </h3>
+      <hr>
+      <form class="datosCotizacion" id="datosCotizacion" action="index.html" method="post">
+  
+
+  <div class="form-row">
+        <div class="col-md-3 mb-3">
+        <label for="inputEmail4">cliente</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+        <div class="col-md-3 mb-3">
+         <label for="">atencion</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+        <div class="col-md-3 mb-3">
+        <label for="">telefono de contacto</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+        <div class="col-md-3 mb-3">
+        <label for="">email de contacto</label>
+        <input type="email" class="form-control" id="formGroupExampleInput" placeholder="jose.@email.com">
+        </div>
+        </div>
+
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+          <label for="">condicion de pago</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="">Valides de la oferta</label>
+            <input type="datetime-local" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+         <div class="col-md-3 mb-3">
+           <label for="">tiempo de entrega</label>
+           <input type="datetime-local" class="form-control" id="formGroupExampleInput" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+            <label for="">descripcion</label>
+            <input type="form-control" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>
+              
+              <div class="form-row">
+<div class="form-group col-md-4">
+      <label for="inputState">Tipo de servicio</label>
+      <select id="inputState" class="form-control">
+        <option selected>Elije</option>
+        <option>Infantil</option>
+        <option>Empresarial</option>
+        <option>Conciertos</option>
+              
+
+              </select>
+
+              </div>
+              <div class="container">
+
+                 <button  id="boton-abrir-popup" class="btn btn-primary"type="button" name="Nuevo cliente">+Nuevo clientes</button>
+                 <button  id="boton-abrir-popup-Productos" class="btn btn-primary"type="button" name="Nuevo cliente">+Crear producto</button>
+                <button id="boton-abrir-popup-buscador" class="btn btn-primary"type="button" name="button">buscar producto</button>
+                <button type="button" class="btn btn-primary" name="button">guardar </button>
+                </div >
+
+          </div>
+
+
+
+        </div>
+        <hr>
+        <div class="tabla">
+          <table border="1">
+
+
+          <thead>
+            <tr>
+              <th>codigo</th>
+              <th>producto</th>
+              <th>cantidad</th>
+             <th>precioUni</th>
+            <th>total</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+
+
   </section>
+
+<!-- IDEA: ventanas emerjentess -->
+
+</div>
+
+<div class="ventanaNuevoCliente" id="ventanaNuevoCliente">
+  <div class="contenidoVentanaCliente" id="contenidoVentanaCliente">
+    <h4>Agregar nuevo cliente </h4>
+    <hr>
+    <div class="contenedorFormClientes">
+
+
+    <form class="formVentanaCleinte" action="index.html" method="post">
+<div class="cont2">
+<div class="cont3">
+
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombre del cliente</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Apellido</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="">
+    </div>
   </div>
 
-<script src="../js/jquery-3.5.1.min.js"></script>
-<script src="../js/"></script>
-<script src=" ../js/boostrap.min.js" charset="utf-8"></script>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombre comercial</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">direccion</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Correo electronico</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Telefono</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="">
+    </div>
+
+
+
+      </div>
+      <hr>
+      <div class="contBoton">
+        <button   class="btn btn-primary"id="btn-cerrar-popup"type="button" name="button">cerrar</button>
+          <button class="btn btn-primary"type="button" name="button">guardar cambios</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- IDEA: ventana de nuevo productos -->
+<div class="ventanaNuevoProducto" id="ventanaNuevoProducto">
+  <div class="contenidoVentanaProducto" id="contenidoVentanaProducto">
+    <h4>Agregar nuevo Productos </h4>
+    <hr>
+    <div class="contenedorFormProductos">
+
+
+    <form class="formVentanaProductos" action="index.html" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombre del producto</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Marca</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="">
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Descripcion</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+
+
+    <div class="form-group col-md-4">
+      <label for="inputState">TEstado</label>
+      <select id="inputState" class="form-control">
+        <option selected>Elije</option>
+        <option>Activo</option>
+        <option>Inactivo</option>
+</select>
+</div>
+</div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Proovedor</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Precio</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="">
+    </div>
+  </div>
+<div class="cont2">
+  <div class="cont3">
+
+
+
+
+
+</div>
+
+</div>
+
+
+      </div>
+      <hr>
+      <div class="contBoton">
+        <button   class="btn btn-primary"id="btn-cerrar-popup-productos"type="button" name="button">cerrar</button>
+          <button class="btn btn-primary"type="button" name="button">guardar cambios</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- IDEA: aqui esta la ventana buscador producto -->
+<div class="ventana_buscador"id="ventana_buscador">
+<div class="contenidoBuscador" id="contenidoBuscador">
+<h3>selecione producto</h3>
+<hr>
+<section>
+ <form class="contenidoFormBuscador" action="index.html" method="post">
+   <div class="">
+
+     <input type="search" name="" value="">
+     <label>Buscador</label>
+   </div>
+   <hr>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>codigo</th>
+          <th>nombre</th>
+          <th>cantidad</th>
+          <th>precio</th>
+        </tr>
+      </thead>
+      <tbody>
+<tr>
+  <td>235</td>
+  <td>castillo</td>
+  <td>1</td>
+  <td>5000</td>
+  <td> <span></span> </td>
+ </tr>
+      </tbody>
+    </table>
+    <hr>
+    <div class="">
+        <button id="btn-cerrar-buscador"type="button" name="button">cerrar</button>
+    </div>
+
+</section>
+</div>
+  </div>
+<script src="js/cotizador.js"></script>
 
   </body>
 

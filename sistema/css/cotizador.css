@@ -1,5 +1,9 @@
+ body{
+   background-image: url("images/backgrau.jpg");
+ }
 .tabla_de_contenido{
   display: flex;
+  background: #white;
 }
 .navegador_sistema2{
   background: #333;
@@ -31,7 +35,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
-
+/* IDEA:  */
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -48,3 +52,159 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #333;}
+
+.navegador_sistema2{
+  margin: 0px 138px 0px 0px ;
+}
+.cont1{
+      margin: 0px 5px 14px 2px;
+      font-variant: all-small-caps;
+    display: grid;
+}
+/* IDEA: estilo Cotizador */
+/* IDEA: estilos de ventana */
+
+.ventanaNuevoCliente{
+
+   top: 0;
+   bottom: 0;
+   left: 498px;
+   right: 0;
+   display: flex;
+   align-items: center;
+   justify-content:  center;
+    visibility: hidde;
+    margin: 0;
+    padding: 0;
+    width: 462px;
+    visibility: hidden;
+    position: fixed;
+}
+.ventanaNuevoCliente.active{
+  visibility: visible;
+}
+.contenidoVentanaCliente{
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  text-align:  center;
+      border: outset;
+}
+.contenedorFormClientes{
+  box-sizing: border-box;
+    display: grid;
+    TEXT-ALIGN: left;
+    font-variant: all-small-caps;
+}
+.cont2{
+  display: flex;
+  margin: -4px 0px 14px 4px;
+    padding: 0px 0px 5px 1px;
+}
+.cont3{
+      margin: 0px 12px 0px 14px;
+}
+.contBoton{
+  text-align: center;
+
+}
+.contBoton button{
+  color: white;
+  background: #007bff;
+}
+.ventanaNuevoProducto{
+  top: 0;
+  bottom: 0;
+  left: 498px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+   visibility: hidde;
+   margin: 0;
+   padding: 0;
+   width: 462px;
+   visibility: hidden;
+   position: fixed;
+}
+.ventanaNuevoProducto.active{
+  visibility: visible;
+}
+.contenidoVentanaProducto{
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 15px;
+  text-align:  center;
+      border: outset;
+}.contenedorFormProductos{
+  box-sizing: border-box;
+    display: grid;
+    TEXT-ALIGN: left;
+    font-variant: all-small-caps;
+}
+/* IDEA: este es el buscador_sistema1 */
+.buscadorProducto{
+  top: 0;
+  bottom: 0;
+  left: 498px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+   visibility: e;
+   margin: 0;
+   padding: 0;
+   width: 460px;
+   visibility: hiden;
+   position: fixed;
+}
+.ventana_buscador{
+  top: -234px;
+  bottom: 0;
+  left: 310px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+   visibility: hidde;
+   margin: 0;
+   padding: 0;
+   width: 800px;
+   visibility:  hidden;
+   position: fixed;
+}
+.ventana_buscador.active{
+  visibility: visible;
+}
+.contenidoBuscador{
+  background: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  text-align:  center;
+  width: 799px;
+  height: inherit;
+      border: outset;
+}
+.contenidoFormBuscador{
+  box-sizing: border-box;
+    display: grid;
+    TEXT-ALIGN: left;
+    font-variant: all-small-caps;
+}
+
+table{
+  width: 100%;
+  background: white;
+   text-align: left;
+}
+
+.carrito_body{
+  position: absolute;
+  right: 30px;
+  left: 200px;
+
+
+}
