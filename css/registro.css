@@ -48,7 +48,9 @@ margin: -19px;
  border-radius: 3px;
  padding: 30px;
  text-align:  center;
- width: 600px;
+width: 500px;
+ text-align: left;
+   font-variant: all-small-caps;
 
 }
 .popup .btn-cerrar-popup
