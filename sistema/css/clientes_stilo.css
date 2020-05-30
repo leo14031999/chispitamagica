@@ -1,6 +1,6 @@
-.tabla_de_contenido{
+ .tabla_de_contenido{
   display: flex;
-  background: #49505740;
+  background: white;
 }
 .navegador_sistema2{
   background: #333;
@@ -49,3 +49,31 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #333;}
+
+.navegador_sistema2{
+  margin: 0px 99px 0px 0px
+}
+.row {
+
+}
+.cont1{
+  display: flex;
+  margin: 0px 0px 15px 0px
+}
+.cont2{
+  margin: 0px 80px 0px 0px
+}
+.form_clientes{
+  font-variant: all-small-caps;
+}
+.form_cliente{display: table-caption;
+  width: max-content;
+  padding: 0px 8px 15px 21px;
+    display: table-caption;
+    width: max-content;
+    margin: 64px 3px 27px 2px;
+    background: white;
+}
+table{
+  width: 100%;
+}
