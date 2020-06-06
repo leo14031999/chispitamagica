@@ -267,7 +267,11 @@ body
 {
    border: 1px solid #007bff;
    border-radius: 4px;
+
    background-color: #007bff;
+
+   background-color:#007bff;
+
    background-image: none;
    color: #FFFFFF;
    font-family: Arial;
@@ -1557,7 +1561,11 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
+
    background-color:#007bff;
+
+   background-color: #007bff;
+
    background-image: none;
    border-radius: 4px;
    margin: 0;
@@ -1576,7 +1584,11 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
+
    background-color:#007bff;
+
+   background-color: #007bff;
+
    background-image: none;
    border-radius: 4px;
    margin: 0;
@@ -2126,7 +2138,7 @@ body
 }
 }
 
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -2142,7 +2154,7 @@ body
   z-index: 1;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -2150,11 +2162,11 @@ body
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {background-color: #ddd;}
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {background-color: #333;}
