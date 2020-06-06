@@ -1,6 +1,6 @@
 body
 {
-   background-color: #FFFFFF;
+   background-color:#FFFFFF;
    color: #000000;
    font-family: Arial;
    font-weight: normal;
@@ -267,7 +267,11 @@ body
 {
    border: 1px solid #007bff;
    border-radius: 4px;
+<<<<<<< HEAD
+   background-color: #007bff;
+=======
    background-color:#007bff;
+>>>>>>> master
    background-image: none;
    color: #FFFFFF;
    font-family: Arial;
@@ -1557,7 +1561,11 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
+<<<<<<< HEAD
+   background-color:#007bff;
+=======
    background-color: #007bff;
+>>>>>>> master
    background-image: none;
    border-radius: 4px;
    margin: 0;
@@ -1576,7 +1584,11 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
+<<<<<<< HEAD
+   background-color:#007bff;
+=======
    background-color: #007bff;
+>>>>>>> master
    background-image: none;
    border-radius: 4px;
    margin: 0;
@@ -2048,9 +2060,9 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
-   background-color: #FA8072;
+   background-color:#007bff;
    background-image: none;
-   border: 1px solid #FA8072;
+   border: 1px solid #007bff;
    border-radius: 4px;
    margin: 0;
 }
@@ -2068,9 +2080,9 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
-   background-color: #FA8072;
+   background-color: #007bff;
    background-image: none;
-   border: 1px solid #FA8072;
+   border: 1px solid #007bff;
    border-radius: 4px;
    margin: 0;
 }
@@ -2088,9 +2100,9 @@ body
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
-   background-color: #FA8072;
+   background-color: #007bff;
    background-image: none;
-   border: 1px solid #FA8072;
+   border: 1px solid #007bff;
    border-radius: 4px;
    margin: 0;
 }

@@ -1,9 +1,13 @@
 .tabla_de_contenido{
+<<<<<<< Updated upstream
   background: #f7f7f7;
+=======
+  background: #e9ecef85;
+>>>>>>> Stashed changes
 }
 a
 {
-   color: #0000FF;
+   color: #007bff;
    text-decoration: underline;
 }
 a:visited
